@@ -32,9 +32,9 @@
             $_SESSION['usuarioNiveisAcessoid'] = $row['niveis_acesso_id'];
             //header("Location: ../dashboard.php");
               if ($_SESSION['usuarioNiveisAcessoid'] == "1"){ 
-                  header("Location: ../dashboard.php");
+                  header("Location: ../dashboardAdm.php");
               }else{
-                  header("Location: ../dashboard(original).php");
+                  header("Location: ../dashboardAreaPesquisador.php");
               }      
           } else{
               header("Location: ../index.php");

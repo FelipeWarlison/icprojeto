@@ -49,13 +49,10 @@
         <img src="">
         <h2 class="form-signin-heading">Acesso de Usuário</h2>
         <label for="inputEmail" class="sr-only">Nome</label>
-        <input type="text" name="uid" id="exampleInputEmail1" aria-describedby="emailHelp" class="form-control" placeholder="Usuario" required autofocus>
+        <input onfocus="this.value='';" type="text" name="uid" id="exampleInputEmail1" aria-describedby="emailHelp" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" name="psw" id="exampleInputPassword1" class="form-control" placeholder="Senha" required>
-        <button class="btn btn-lg btn-danger btn-block" name="login-button" type="submit">Acessar</button>
-        <div class="text-center">
-          <a href="addusuario.php"><br>Cadastre-se</a>
-        </div> 
+        <input onfocus="this.value='';" type="password" name="psw" id="exampleInputPassword1" class="form-control" placeholder="Senha" required>
+        <button class="btn btn-lg btn-danger btn-block" name="login-button" type="submit">Acessar</button> 
       </form>
 
       <p class="text-center text-danger">

@@ -1,3 +1,4 @@
+<div class="container">
 <form class="" action="includes/editquestionario.inc.php?tipo=<?php echo $tipo?>&questId=<?php echo $questId?>&pid=<?php echo $pid?>" method="post">
   <br>
   <h3 class="text-center">FICHA DE INVESTIGAÇÃO</h3>
@@ -232,3 +233,4 @@
     <br>
   </div>
 </form>
+</div>

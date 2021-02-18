@@ -5,12 +5,12 @@
     $nomePaciente = $_POST['Pnome'];
 
     if(empty($nomePaciente)){
-      header("Location: ../dashboard.php?error=empty");
+      header("Location: ../dashboardAdm.php?error=empty");
     } else {
       $sql = "SELECT nome from pessoas where nome=?";
       $stmt = mysqli_stmt_init($conn);
       if(!mysqli_stmt_prepare($stmt,$sql)){
-        header("Location: ../dashboard.php?error=sqlerror");
+        header("Location: ../dashboardAdm.php?error=sqlerror");
         exit();
       } else {
         mysqli_stmt_bind_param($stmt,"s", $nomePaciente);
@@ -18,25 +18,29 @@
         mysqli_stmt_store_result($stmt);
         $resultCheck = mysqli_stmt_num_rows($stmt);
         if ($resultCheck > 0){
-          header("Location: ../dashboard.php?error=pacienteexiste");
+          header("Location: ../dashboardAdm.php?error=pacienteexiste");
           exit();
         } else {
           $sql = "INSERT INTO pessoas (nome) VALUES (?)";
           $stmt = mysqli_stmt_init($conn);
           if(!mysqli_stmt_prepare($stmt,$sql)){
-            header("Location: ../dashboard.php?error=sqlerror");
+            header("Location: ../dashboardAdm.php?error=sqlerror");
             exit();
           } else {
             mysqli_stmt_bind_param($stmt,"s", $nomePaciente);
             mysqli_stmt_execute($stmt);
-              header("Location: ../dashboard.php?error=noAd");
-              exit();
+              echo "
+                    <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/projetoy/projeto_ic/public_html/dashboardAdm.php#pacientes'>
+                    <script type=\"text/javascript\">
+                        alert(\"Usuario cadastrado com Sucesso.\");
+                    </script>
+                    ";
           }
         }
       }
     }
   } else {
-    header("Location: ../dashboard.php");
+    header("Location: ../dashboardAdm.php");
     exit();
   }
 

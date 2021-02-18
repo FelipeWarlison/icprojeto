@@ -20,13 +20,13 @@
             } else {
               mysqli_stmt_bind_param($stmt1,"i",$paciente);
               mysqli_stmt_execute($stmt1);
-              header("Location: ../dashboard.php?#delete=successo");
+              header("Location: ../dashboardAdm.php?#delete=successo");
               exit();
           }
         }
 
   } else {
-    header("Location: ../registros.php?paciente=$paciente");
+    header("Location: ../dashboardAdm.php?paciente=$paciente");
     exit();
   }
 

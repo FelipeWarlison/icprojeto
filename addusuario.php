@@ -42,18 +42,30 @@
           </a>
        </div>
     </div>
-
-    </div>
-
       <form class="form-signin" method="POST" action="includes\cadastro.usuario.php">
-        <img src="">
         <h2 class="form-signin-heading">Cadastro de Usuário</h2>
         <label for="inputEmail" class="sr-only">Nome</label>
         <input type="text" name="uid" id="username" aria-describedby="emailHelp" class="form-control" placeholder="Usuario" required autofocus>
+
         <label for="inputE-mail" class="sr-only">Email</label>
         <input type="email" name="email" id="useremail" class="form-control" placeholder="Email" required autofocus>
+        
+        <label for="inputContact" class="sr-only">Contato</label>
+        <input type="tel" name="end" id="usercontato" class="form-control" placeholder="Endereço Completo" required autofocus>
+
+        <label for="inputBirthday" class="sr-only">Data de Aniversário</label>
+        <input type="date" name="birthday" id="userbirthday" class="form-control" placeholder="Data de Nascimento" required autofocus>        
+
+        <label for="inputTell" class="sr-only">Telefone</label>
+        <input type="tel" name="tell" id="usertell" class="form-control" placeholder="Telefone de Contato" required autofocus>
+
+        <label for="inputNivel" class="sr-only">Nivel</label>
+        <input type="text" name="nivel" id="usernivel" class="form-control" placeholder="Nivel de Acesso" required autofocus>
+
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" name="psw" id="password" class="form-control" placeholder="Senha" required>
+        
+
         <button class="btn btn-lg btn-danger btn-block" name="cadastro-button" type="submit">CADASTRAR</button>
         <div class="text-center">
           <a href="index.php"><br>Já tem cadastro? Faça o Login</a>

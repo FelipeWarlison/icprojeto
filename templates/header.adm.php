@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (!isset($_SESSION['userUid'])) {
+  if (!isset($_SESSION['usuarioNiveisAcessoid'])) {
   header("Location: index.php?log=out");
 }
 ?>
@@ -18,9 +18,12 @@
     <title>Projeto Onco Heart</title>
 
     <!-- bootstrap CSS -->
+    <link href="css/signup.css" rel="stylesheet">
     <link rel="stylesheet" href="css\master.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css\bootstrap-4.4.1-dist\css\bootstrap-grid.min.css">
     <link rel="stylesheet" href="css\bootstrap-4.4.1-dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -42,24 +45,21 @@
 </head>
 <body>
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <img height="40" src="images/oncohearthp.png" alt="">
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="dashboard.php"><i class="fa fa-home">&nbsp;</i>Início<span class="sr-only">(Página atual)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="includes/logout.inc.php"><i class="fa fa-user">&nbsp;</i>Logout</a>
-      </li>
-    </ul>
-    
-  </div>
-</nav>
+<!--header menu start-->
+<div class="wrapper">
+    <div class="header">
+        <div class="header-menu">
+            <div class="title">PROJETO <span>ONCOHEART</span></div>
+            
+                <ul>
+                    <li><a href="dashboardAdm.php"><i class="fas fa-home"></i></a></li>
+                    <li><a href="includes/logout.inc.php"><i class="fas fa-power-off"></i></a></li>
+                </ul>
+        </div>
+    </div>
+</div>
+<br><br><br>
+    <!--header menu end-->
 </header>
 <?php
 if (isset($_GET['error'])):

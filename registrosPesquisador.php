@@ -1,6 +1,6 @@
 
     <?php
-      include_once("templates\header.php");
+      include_once("templates\header.pesquisador.php");
       include_once("includes/reg.inc.php");
 
       $aux = mysqli_fetch_assoc($result2);
@@ -13,7 +13,7 @@
       <br>
       <div class="jumbotron dasboard-panel">
         <div class="btn-group">
-          <a href="questionario.php?paciente=<?php echo $paciente;?>" type="button" class="btn btn-outline-success my-2 my-sm-0"><i class="fa fa-sticky-note" aria-hidden="true"></i> Adicionar questionário</a>
+          <a href="questionario.pesquisador.php?paciente=<?php echo $paciente;?>" type="button" class="btn btn-outline-success my-2 my-sm-0"><i class="fa fa-sticky-note" aria-hidden="true"></i> Adicionar questionário</a>
           <button type="button" name="button" data-toggle="modal" data-target="#modalEditSite" class="btn btn-outline-success my-2 my-sm-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button>
           <button type="button" name="button" data-toggle="modal" data-target="#modalDeleteSite" class="btn btn-outline-danger my-2 my-sm-0"><i class="fa fa-trash-o" aria-hidden="true"></i> Deletar</button>
         </div>
@@ -45,9 +45,9 @@
               <td><?php $linha['data'] = strtotime($linha['data']); echo date('d/m/Y', $linha['data']);?></td>
               <td>
                 <div class="btn-group">
-                  <a href="edit.php?Idq=<?php echo $linha['questId'];?>&pid=<?php echo $pid;?>" type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</a>
-                  <a onclick = "return confirm('Tem certeza que deseja excluir?')" href="includes\deletequestionario.inc.php?questId=<?php echo $linha['questId']?>&pid=<?php echo $linha['pid']?>" type="button" class="btn btn-outline-danger" ><i class="fa fa-trash-o" ></i> Apagar</a>
-                  <a href="gerar_planilha?Idq=<?php echo $linha['questId'];?>&pid=<?php echo $pid;?>" type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Gerar Excel
+                  <a href="edit.pesquisador.php?Idq=<?php echo $linha['questId'];?>&pid=<?php echo $pid;?>" type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</a>
+                  <a onclick = "return confirm('Tem certeza que deseja excluir?')" href="includes\deletequestionario.pesquisador.php?questId=<?php echo $linha['questId']?>&pid=<?php echo $linha['pid']?>" type="button" class="btn btn-outline-danger" ><i class="fa fa-trash-o" ></i> Apagar</a>
+                  <a href="gerar_planilha2?Idq=<?php echo $linha['questId'];?>&pid=<?php echo $pid;?>" type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Gerar Excel
                   <?php
                     if($linha['tipo'] == 1){}
                     elseif ($linha['tipo'] == 2){}
@@ -99,7 +99,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form class="form-group" action="includes\deletepaciente.inc.php?paciente=<?php echo $paciente?>" method="post">
+              <form class="form-group" action="includes\deletepaciente.pesquisador.php?paciente=<?php echo $paciente?>" method="post">
                 <div class="modal-body">
                     <p>Tem certeza que deseja deletar o(a) paciente <b><?php echo $pessoa?></b>? Esta ação é irreversível e todos os questionários associados ao(a) paciente serão deletados.</p>
                 </div>

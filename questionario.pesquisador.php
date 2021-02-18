@@ -1,6 +1,6 @@
 
     <!-- Navbar -->
-    <?php include_once("templates\header.php");
+    <?php include_once("templates\header.pesquisador.php");
     if(isset($_GET['paciente'])){
       $paciente = $_GET['paciente'];}
     ?>
@@ -8,7 +8,7 @@
     <div class="container">
       <h1 class="questionario-h1">Adicionar um Questionário</h1>
       <div class="">
-        <form class="form-group" action="includes\addquestionario.inc.php?paciente=<?php echo $paciente?>" method="post" onsubmit="return checkForEmpty()">
+        <form class="form-group" action="includes\addquestionario.pesquisador.php?paciente=<?php echo $paciente?>" method="post" onsubmit="return checkForEmpty()">
           <fieldset class="">
             <select class="custom-select" name="questionario" id="questionarios">
               <option selected value="0">Escolha um tipo de questionário</option>

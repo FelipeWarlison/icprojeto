@@ -22,7 +22,7 @@ if (isset($_POST['ed-questionario-submit']) && isset($_GET['tipo']) && isset($_G
     $sql = "UPDATE questionarios SET data = ?, idade = ?, essbr1 = ?, essbr2 = ?, essbr3 = ?, essbr4 = ?, essbr5 = ?, essbr6 = ?, essbr7 = ?, essbr8 = ? WHERE questId = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
-      header("Location: ../dashboard.php?#error=sqlerror");
+      header("Location: ../dashboardAdm.php?#error=sqlerror");
       exit();
     } else {
       mysqli_stmt_bind_param($stmt,"ssssssssssi", $data1, $idade1, $essbr1,$essbr2,$essbr3,$essbr4,$essbr5,$essbr6,$essbr7,$essbr8, $questId);
@@ -63,7 +63,7 @@ if (isset($_POST['ed-questionario-submit']) && isset($_GET['tipo']) && isset($_G
     $sql = "UPDATE questionarios SET visita = ?, data = ?, nasc = ?, ectoscopia = ?, inspTorax = ?, ictuscordis1 = ?, pulsosA = ?, pulsosP = ?, ictuscordis2 = ?, fc = ?, SO2 = ?, rCardiaco = ?, bulhas = ?, sopro1 = ?, foco = ?, irradiacao = ?, intensidade = ?, sopros = ?, soproArteria = ?, auscultaP = ?, visc = ? WHERE questId = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
-      header("Location: ../dashboard.php?#error=sqlerror");
+      header("Location: ../dashboardAdm.php?#error=sqlerror");
       exit();
     } else {
       mysqli_stmt_bind_param($stmt,"sssssssssssssssssssssi", $visita2, $data2, $nasc2, $ectoscopia, $inspTorax, $ictuscordis1, $pulsosA, $pulsosP, $ictuscordis2, $fc, $SO2, $rCardiaco, $bulhas, $sopro1, $foco, $irradiacao, $intensidade, $sopros, $soproArteria, $auscultaP, $visc, $questId);
@@ -122,7 +122,7 @@ if (isset($_POST['ed-questionario-submit']) && isset($_GET['tipo']) && isset($_G
     $sql = "UPDATE questionarios SET visita = ?, data = ?, grupoRisco = ?, idade = ?, peso3 = ?, estatura3 = ?, circAbd = ?, gordCorp = ?, muscEsq = ?, matabolismo = ?, idadeC = ?, gordVisc = ?, pas1 = ?, pad1 = ?, fc1 = ?, pas2 = ?, pad2 = ?, fc2 = ?, pas3 = ?, pad3 = ?, fc3 = ?, bracoDom = ?, m1d = ?, m2d = ?, m1e = ?, m2e = ?, ecgR = ?, ecg10 = ?, eco = ?, holter = ?, pasB = ?, padB = ?, fcB = ?, pas30 = ?, pad30 = ?, fc30 = ?, pas60 = ?, pad60 = ?, fc60 = ?, pas120 = ?, pad120 = ?, fc120 = ?, medicamentos = ?, resultados = ?, dataCol = ? WHERE questId = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
-      header("Location: ../dashboard.php?#error=sqlerror");
+      header("Location: ../dashboardAdm.php?#error=sqlerror");
       exit();
     } else {
       mysqli_stmt_bind_param($stmt,"sssssssssssssssssssssssssssssssssssssssssssssi", $visita3, $data3,
@@ -185,7 +185,7 @@ if (isset($_POST['ed-questionario-submit']) && isset($_GET['tipo']) && isset($_G
     $sql = "UPDATE questionarios SET endereco = ?, data = ?, telefone = ?, nasc = ?, meio = ?, estCivil = ?, renda = ?, cor = ?, grau = ?, fuma = ?, fuma1 = ?, fuma2 = ?, fuma3 = ?, fuma4 = ?, bebe = ?, bebe1 = ?, bebe2 = ?, hipertensa = ?, diabetica = ?, colesterol = ?, arritmia = ?, coracao = ?, cirurgia = ?, avc = ?, paisCoracao = ?, paisAvc = ?, mPrimeira = ?, mUltima = ?, anticon = ?, gestacoes = ?, nascidosV = ?, nascidosM = ?, partoP = ?, partoN = ?, partoC = ?, aborto = ? WHERE questId = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
-      header("Location: ../dashboard.php?#error=sqlerror");
+      header("Location: ../dashboardAdm.php?#error=sqlerror");
       exit();
     } else {
       mysqli_stmt_bind_param($stmt,"ssssssssssssssssssssssssssssssssssssi", $endereco, $data4, $telefone, $nascimento4, $meio, $estCivil, $renda, $cor, $grau, $fuma, $fuma1, $fuma2, $fuma3, $fuma4, $bebe, $bebe1, $bebe2, $hipertensa, $diabetica, $colesterol, $arritmia, $coracao, $cirurgia, $avc, $paisCoracao, $paisAvc, $mPrimeira, $mUltima, $anticon, $gestacoes, $nascidosV, $nascidosM, $partoP, $partoN, $partoC, $aborto, $questId);
@@ -210,7 +210,7 @@ if (isset($_POST['ed-questionario-submit']) && isset($_GET['tipo']) && isset($_G
     $sql = "UPDATE questionarios SET data = ?, idade = ?, tovr1 = ?, tovr2 = ?, tovr3 = ?, tovr4 = ?, tovr5 = ?, tovr6 = ?, tovr7 = ?, tovr8 = ?, tovr9 = ?, tovr10 = ? WHERE questId = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
-      header("Location: ../dashboard.php?#error=sqlerror");
+      header("Location: ../dashboardAdm.php?#error=sqlerror");
       exit();
     } else {
       mysqli_stmt_bind_param($stmt,"ssssssssssssi", $data5, $idade5, $tovr1, $tovr2, $tovr3, $tovr4, $tovr5, $tovr6, $tovr7, $tovr8, $tovr9, $tovr10, $questId);
@@ -258,7 +258,7 @@ if (isset($_POST['ed-questionario-submit']) && isset($_GET['tipo']) && isset($_G
     $sql = "UPDATE questionarios SET data = ?, idade = ?, whoqol1 = ?, whoqol2 = ?, whoqol3 = ?, whoqol4 = ?, whoqol5 = ?, whoqol6 = ?, whoqol7 = ?, whoqol8 = ?, whoqol9 = ?, whoqol10 = ?, whoqol11 = ?, whoqol12 = ?, whoqol13 = ?, whoqol14 = ?, whoqol15 = ?, whoqol16 = ?, whoqol17 = ?, whoqol18 = ?, whoqol19 = ?, whoqol20 = ?, whoqol21 = ?, whoqol22 = ?, whoqol23 = ?, whoqol24 = ?, whoqol25 = ?, whoqol26 = ?, ajuda = ?, tempo = ?, comentario = ? WHERE questId = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
-      header("Location: ../dashboard.php?#error=sqlerror");
+      header("Location: ../dashboardAdm.php?#error=sqlerror");
       exit();
     } else {
       mysqli_stmt_bind_param($stmt,"sssssssssssssssssssssssssssssssi", $data6, $idade6, $whoqol1, $whoqol2, $whoqol3, $whoqol4, $whoqol5, $whoqol6, $whoqol7, $whoqol8, $whoqol9, $whoqol10, $whoqol11, $whoqol12, $whoqol13, $whoqol14, $whoqol15, $whoqol16, $whoqol17, $whoqol18, $whoqol19, $whoqol20, $whoqol21, $whoqol22, $whoqol23, $whoqol24, $whoqol25, $whoqol26, $ajuda, $tempo, $comentario, $questId);

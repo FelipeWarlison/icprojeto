@@ -9,16 +9,16 @@
           $sql = "DELETE FROM questionarios WHERE questId = ?;";
           $stmt = mysqli_stmt_init($conn);
           if(!mysqli_stmt_prepare($stmt,$sql)){
-            header("Location: ../registros.php?paciente=$paciente&#error=sqlerror");
+            header("Location: ../registros.adm.php?paciente=$paciente&#error=sqlerror");
             exit();
           } else {
             mysqli_stmt_bind_param($stmt,"i",$questId);
             mysqli_stmt_execute($stmt);
-            header("Location: ../registros.php?paciente=$paciente&delete=sucesso");
+            header("Location: ../registros.adm.php?paciente=$paciente&delete=sucesso");
         }
 
   } else {
-    header("Location: ../dashboard.php");
+    header("Location: ../dashboardAdm.php");
     exit();
   }
 

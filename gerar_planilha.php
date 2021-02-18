@@ -47,7 +47,7 @@
     $html .= '<tr>
                    <th align=left colspan="6">DADOS PESSOAIS:<\th>
               </tr>';
-    $html .= '<tr>
+     $html .= '<tr>
                    <th align=left colspan="6">Paciente: '.$aux1["nome"].'<\th>
               </tr>';
     $html .= '<tr>

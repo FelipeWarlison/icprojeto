@@ -1,8 +1,7 @@
 
-    <div class="container">
 
         <?php
-          include_once("templates\header.php");
+          include_once("templates\header.pesquisador.php");
           include_once("includes/resp.inc.php");
 
           $aux = mysqli_fetch_assoc($result2);
@@ -130,7 +129,7 @@
 
         <?php endif; ?>
 
-    </div>
+    
 
 
 

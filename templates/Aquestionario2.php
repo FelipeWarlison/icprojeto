@@ -1,3 +1,4 @@
+<div class="container">
 <form class="form-group" action="includes/editquestionario.inc.php?tipo=<?php echo $tipo?>&questId=<?php echo $questId?>&pid=<?php echo $pid?>" method="post" onsubmit="return checkForEmpty()">
   <br>
   <h3 class="text-center">FICHA DE CONSULTA CARDIOLÓGICA</h3>
@@ -201,6 +202,7 @@
 </div>
 <br>
 </form>
+</div>
 
 <script type="text/javascript">
 

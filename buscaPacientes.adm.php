@@ -15,7 +15,7 @@
     <?php while ($linha = mysqli_fetch_assoc($result)): ?>
     <tr>
       <td><?php echo $linha['nome']?></td>
-      <td><a href="registros.php?paciente=<?php echo $linha['pid']?>" class="btn btn-outline-dark" type="button" name="ver">Ver</a></td>
+      <td><a href="registros.adm.php?paciente=<?php echo $linha['pid']?>" class="btn btn-outline-dark" type="button" name="ver">Ver</a></td>
     </tr>
   <?php endwhile; ?>
   </table>

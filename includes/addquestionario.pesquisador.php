@@ -32,7 +32,7 @@ if (isset($_POST["add-questionario-submit"])) {
         } else {
           mysqli_stmt_bind_param($stmt,"ssssssssssss", $pid,$tipoquestionario,$data1,$idade1,$essbr1,$essbr2,$essbr3,$essbr4,$essbr5,$essbr6,$essbr7,$essbr8);
           mysqli_stmt_execute($stmt);
-            header("Location: ../dashboardAdm.php?error=NoS");
+            header("Location: ../dashboardAreaPesquisador.php?error=NoS");
             exit();
           }
       }
@@ -87,7 +87,7 @@ if (isset($_POST["add-questionario-submit"])) {
           } else {
             mysqli_stmt_bind_param($stmt,"issssssssssssssssssssss", $visita2, $data2, $nasc2, $ectoscopia, $inspTorax, $ictuscordis1, $pulsosA, $pulsosP, $ictuscordis2, $fc, $SO2, $rCardiaco, $bulhas, $sopro1, $foco, $irradiacao, $intensidade, $sopros, $soproArteria, $auscultaP, $visc, $tipoquestionario, $pid);
             mysqli_stmt_execute($stmt);
-            header("Location: ../dashboardAdm.php?error=NoS");
+            header("Location: ../dashboardAreaPesquisador.php?error=NoS");
             }
         }
       }
@@ -155,7 +155,7 @@ if (isset($_POST["add-questionario-submit"])) {
             } else {
               mysqli_stmt_bind_param($stmt,"sssssssssssssssssssssssssssssssssssssssssssssss", $visita3, $data3, $grupoRisco, $idade3, $peso3, $estatura3, $circAbd, $gordCorp, $muscEsq, $matabolismo, $idadeC, $gordVisc, $pas1, $pad1, $fc1, $pas2, $pad2, $fc2, $pas3, $pad3, $fc3, $bracoDom, $m1d, $m2d, $m1e, $m2e, $ecgR, $ecg10, $eco, $holter, $pasB, $padB, $fcB, $pas30, $pad30, $fc30, $pas60, $pad60, $fc60, $pas120, $pad120, $fc120, $medicamentos, $resultados, $dataCol, $tipoquestionario, $pid);
               mysqli_stmt_execute($stmt);
-              header("Location: ../dashboardAdm.php?error=NoS");
+              header("Location: ../dashboardAreaPesquisador.php?error=NoS");
               }
           }
 
@@ -227,7 +227,7 @@ if (isset($_POST["add-questionario-submit"])) {
             } else {
               mysqli_stmt_bind_param($stmt,"ssssssssssssssssssssssssssssssssssssss", $endereco, $data4, $telefone, $nascimento4, $meio, $estCivil, $renda, $cor, $grau, $fuma, $fuma1, $fuma2, $fuma3, $fuma4, $bebe, $bebe1, $bebe2, $hipertensa, $diabetica, $colesterol, $arritmia, $coracao, $cirurgia, $avc, $paisCoracao, $paisAvc, $mPrimeira, $mUltima, $anticon, $gestacoes, $nascidosV, $nascidosM, $partoP, $partoN, $partoC, $aborto, $tipoquestionario, $pid);
               mysqli_stmt_execute($stmt);
-              header("Location: ../dashboardAdm.php?error=NoS");
+              header("Location: ../dashboardAreaPesquisador.php?error=NoS");
               }
           }
       } elseif($tipoquestionario == 5){
@@ -257,7 +257,7 @@ if (isset($_POST["add-questionario-submit"])) {
             } else {
               mysqli_stmt_bind_param($stmt,"ssssssssssssss", $pid,$tipoquestionario,$data5,$idade5, $tovr1, $tovr2, $tovr3, $tovr4, $tovr5, $tovr6, $tovr7, $tovr8, $tovr9, $tovr10);
               mysqli_stmt_execute($stmt);
-              header("Location: ../dashboardAdm.php?error=NoS");
+              header("Location: ../dashboardAreaPesquisador.php?error=NoS");
                 exit();
               }
           }
@@ -318,7 +318,7 @@ if (isset($_POST["add-questionario-submit"])) {
               } else {
                 mysqli_stmt_bind_param($stmt,"sssssssssssssssssssssssssssssssss", $pid,$tipoquestionario,$data6,$idade6, $whoqol1, $whoqol2, $whoqol3, $whoqol4, $whoqol5, $whoqol6, $whoqol7, $whoqol8, $whoqol9, $whoqol10, $whoqol11, $whoqol12, $whoqol13, $whoqol14, $whoqol15, $whoqol16, $whoqol17, $whoqol18, $whoqol19, $whoqol20, $whoqol21, $whoqol22, $whoqol23, $whoqol24, $whoqol25, $whoqol26, $ajuda, $tempo, $comentario);
                 mysqli_stmt_execute($stmt);
-                header("Location: ../dashboardAdm.php?error=NoS");
+                header("Location: ../dashboardAreaPesquisador.php?error=NoS");
                   exit();
                 }
             }

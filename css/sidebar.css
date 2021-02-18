@@ -13,7 +13,7 @@ body{
 
 .wrapper .header{
   z-index: 1;
-  background: #22242A;
+  background: #b70909;
   position: fixed;
   width: calc(100% - 0%);
   height: 70px;
@@ -38,14 +38,13 @@ body{
 }
 
 .wrapper .header .header-menu .title span{
-  color: #4CCEE8;
+  color: #fff;
 }
 
 .wrapper .header .header-menu .sidebar-btn{
   color: #fff;
-  padding-left:50px; 
   position: absolute;
-  margin-left: 240px;
+  margin-left: 290px;
   font-size: 22px;
   font-weight: 900;
   cursor: pointer;
@@ -84,7 +83,7 @@ body{
 
 .wrapper .sidebar{
   z-index: 1;
-  background: #2F323A;
+  background: #5a1111;
   position: fixed;
   top: 70px;
   width: 250px;
@@ -106,7 +105,7 @@ body{
 }
 
 .wrapper .sidebar .sidebar-menu .profile p{
-  color: #bbb;
+  color: #fff;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -126,7 +125,7 @@ body{
 }
 
 .wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
-  color: #4CCEE8;
+  color: red;
 }
 
 .wrapper .sidebar .sidebar-menu .item .menu-btn i{
@@ -177,10 +176,9 @@ body{
 
 .wrapper .main-container{
   width: (100% - 250px);
-  margin-top: 70px;
+  margin-top: 30px;
   margin-left: 250px;
   padding: 15px;
-  background-image: url("images/onca.jpg");
   background-size: cover;
   height: 100vh;
   transition: 0.3s;
@@ -210,5 +208,10 @@ body{
   margin-left: 70px;
 }
 
-
+.wrapper .main-container .{
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
       
